@@ -1,38 +1,447 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Montserrat&display=swap");
+
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  background-color: #000022;
+  color: white;
+  transition: 0.2s ease all;
+}
+
+h1 {
+  font-family: "Fira Code", monospace;
+}
+
+p,
+.links * {
+  font-family: "Montserrat", sans-serif;
+}
+
+span {
+  color: #ff6363;
+  font-weight: 800;
+}
+
+.minor-headings {
+  font-size: 60px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  width: 7vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App {
+  margin: 5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.blur {
+  filter: blur(7px);
+}
+
+.nav {
+  width: 100%;
+  position: relative;
+  height: 10vh;
+}
+
+.images-nav a {
+  display: block;
+  margin-top: 70px;
+}
+
+.socials {
+  position: fixed;
+  bottom: 50px;
+  width: 7vw;
+  text-align: center;
+}
+
+.socials img {
+  width: 40px;
+}
+
+.links {
+  position: absolute;
+  height: 100px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 20px;
+  top: 0;
+  right: 0;
+}
+
+.hamburger-menu {
+  top: 12%;
+  right: 25px !important;
+}
+
+.menu {
+  position: fixed;
+  display: none;
+  right: 25%;
+  height: 50px;
+  transition: all 0.2s ease-in;
+  transform: translateY(2px) !important;
+  z-index: 200;
+}
+
+.menu span {
+  margin: 10px 0;
+  display: block;
+  width: 50%;
+  position: relative;
+  right: -50%;
+  height: 6px;
+  background-color: white;
+}
+
+.close-menu {
+  background-color: #9aadea;
+  height: 100%;
+  top: 0;
+  right: 0%;
+  width: 50vw;
+}
+
+.close-menu span {
+  top: 12%;
+  left: 5%;
+  width: 15%;
+  background-color: #341677;
+}
+
+.close-menu .bar-2 {
+  display: none;
+}
+
+.close-menu .bar-1 {
+  transform: rotate(45deg);
+}
+
+.close-menu .bar-3 {
+  transform: translateY(-15px) rotate(-45deg);
+}
+
+.hamburger-menu .bar-1 {
+  background-color: #806cd4 !important;
+}
+
+.bar-2 {
+  width: 40% !important;
+  background-color: #9aadea !important;
+}
+
+.hamburger-menu .bar-3 {
+  width: 25% !important;
+  background-color: #b3efff !important;
+}
+
+.links * {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.links *:nth-child(1) {
+  margin-right: 140px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.links *:nth-child(2) {
+  margin-right: 140px;
+}
+
+.links *:last-child() {
+  right: 0;
+}
+
+.links *:hover {
+  cursor: pointer;
+  color: #ff6363;
+  transition: 0.2s ease;
+}
+
+.links a:hover {
+  font-weight: 700;
+}
+
+.page {
+  margin-left: 120px;
+  position: relative;
+}
+
+.headings {
+  position: relative;
+  text-align: center;
+  font-size: 3vw !important;
+  height: 19.5vw;
+  transform: translate(0, -20px);
+}
+
+.heading-homepage {
+  margin-left: 25%;
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  background-color: #ff6363;
+}
+
+.typing-animation {
+  color: #ff6363;
+  text-align: center;
+  align-items: center;
+}
+
+.typing-animation::after {
+  content: "";
+  width: 3.3vw;
+  height: 6vw;
+  background-color: #341677;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.description-wrapper {
+  width: 100%;
+}
+
+.description {
+  width: 90%;
+  margin: 0px 10%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #341677;
+}
+
+.send_message {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.contact {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #ff6363;
+  width: 3.7vw;
+}
+
+.contact:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000022;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #341677;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6363;
+}
+
+.none {
+  display: none;
+}
+
+.whoami,
+.projects {
+  margin: 145px 0;
+}
+
+.whoami .description {
+  width: 90%;
+}
+
+.projects {
+  padding-bottom: 12%;
+}
+
+.whoami h1 {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.skills {
+  transform: translate(5%, 0);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 50px;
+  width: 90%;
+  margin: 0 10%;
+  text-align: center;
+}
+
+.skills div {
+  position: relative;
+  margin-right: 50px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.skills div:hover {
+  transition: 0.1s ease-in-out all;
+  cursor: pointer;
+  background-color: #ff6363;
+}
+
+.react:hover {
+  border: 5px solid white;
+}
+
+.python:hover {
+  border: 5px solid white;
+}
+
+.c:hover {
+  border-right: 5px solid white;
+}
+
+.linux:hover {
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+}
+
+.design:hover {
+  border: 5px solid white;
+}
+
+.skills img {
+  width: 60px;
+}
+
+.whoami .description {
+  margin: 10% !important;
+}
+
+.alert {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  margin-top: 15%;
+}
+
+.alert-block {
+  text-align: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .headings {
+    margin-top: 10%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: block;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .links a {
+    display: none;
+  }
+
+  .toggle-links a {
+    width: 120%;
+    font-size: 24px;
+    display: block !important;
+    margin: 20% 0;
+    color: #000022;
+  }
+
+  .toggle-links {
+    margin: 55% 30%;
+  }
+
+  .socials {
+    transform: translateX(40vh);
+    width: 40vw;
+    z-index: 220;
+    bottom: 10px;
+  }
+
+  .links img:hover {
+    cursor: pointer;
+  }
+
+  .logo,
+  .images-nav a {
+    width: 10vw;
+  }
+
+  .page {
+    position: absolute;
+  }
+
+  .homepage {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    transform: translate(-70px);
+  }
+
+  .headings {
+    height: 50%;
+    position: relative;
+    top: 50%;
+  }
+
+  .heading-homepage {
+    position: relative;
+    right: 10%;
+    display: flex;
+    width: 60%;
+  }
+
+  .contact {
+    padding: 15px;
+    width: 50px;
+  }
+
+  .description {
+    margin: 70px auto;
+  }
+
+  .whoami .description {
+    transform: translate(-10%, 0);
+  }
+
+  .skills div {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skills div img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skills {
+    place-items: center;
+    margin: 0 auto;
   }
 }
