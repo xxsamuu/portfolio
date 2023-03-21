@@ -52,19 +52,21 @@ const Hero = () => {
           <h1 className="typing-animation">{text}</h1>
         </div>
       </div>
-      <div className="description">
-        <p>
-          I'm a young programmer with a passion for technology and a drive to
-          create innovative solutions. I'm committed to developing clean,
-          efficient, and user-friendly applications that make a positive impact.
-          When I'm not coding, you can find me exploring new technologies,
-          working out, reading or drawing.
-        </p>
-      </div>
-      <div className="send_message">
-        <a href="mailto:samprogramming05@gmail.com">
-          <img src={contact} className="contact" />
-        </a>
+      <div className="description-wrapper">
+        <div className="description">
+          <p>
+            I'm a young programmer with a passion for technology and a drive to
+            create innovative solutions. I'm committed to developing clean,
+            efficient, and user-friendly applications that make a positive
+            impact. When I'm not coding, you can find me exploring new
+            technologies, working out, reading or drawing.
+          </p>
+        </div>
+        <div className="send_message">
+          <a href="mailto:samprogramming05@gmail.com">
+            <img src={contact} className="contact" />
+          </a>
+        </div>
       </div>
     </div>
   );

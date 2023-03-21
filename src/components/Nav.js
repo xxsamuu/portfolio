@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../images/logo.png";
 import github from "../images/github.png";
 import linkedin from "../images/linkedin.png";
@@ -15,7 +15,7 @@ const Nav = ({ toggle, settoggle }) => {
             <img src={logo} className="logo" alt="logo" />
           </a>
 
-          <div className={`${!toggle ? "none" : "socials"}`}>
+          <div className={`socials ${!toggle ? "none" : "socials"}`}>
             <a href="https://www.instagram.com/xxsamuu_/" target="_blank">
               <img src={instagram} className="instagram" />
             </a>

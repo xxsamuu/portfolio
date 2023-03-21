@@ -40,6 +40,7 @@ span {
 }
 
 .blur {
+  transform: translateX(70px);
   filter: blur(7px);
 }
 
@@ -85,9 +86,8 @@ span {
   position: fixed;
   display: none;
   right: 25%;
-  height: 50px;
   transition: all 0.2s ease-in;
-  transform: translateY(2px) !important;
+  transform: translateY(-70%) !important;
   z-index: 200;
 }
 
@@ -103,7 +103,8 @@ span {
 
 .close-menu {
   background-color: #9aadea;
-  height: 100%;
+  transform: translateY(2px) !important;
+  height: 110vh;
   top: 0;
   right: 0%;
   width: 50vw;
@@ -219,17 +220,17 @@ span {
 
 .send_message {
   width: 100%;
+  margin-top: 2vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2%;
 }
 
 .contact {
   padding: 12px;
   border-radius: 10px;
   background-color: #ff6363;
-  width: 3.7vw;
+  width: 50px;
 }
 
 .contact:hover {
@@ -253,12 +254,7 @@ span {
   background: #ff6363;
 }
 
-.none {
-  display: none;
-}
-
-.whoami,
-.projects {
+.whoami {
   margin: 145px 0;
 }
 
@@ -266,12 +262,26 @@ span {
   width: 90%;
 }
 
-.projects {
-  padding-bottom: 12%;
-}
-
 .whoami h1 {
   padding-top: 50px;
+  text-align: center;
+}
+
+.projects {
+  margin-top: 80px;
+  height: 90vh;
+}
+
+.alert {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.alert-block {
   text-align: center;
 }
 
@@ -332,26 +342,20 @@ span {
   margin: 10% !important;
 }
 
-.alert {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50%;
-  margin-top: 15%;
-}
-
-.alert-block {
-  text-align: center;
-}
-
 @media screen and (max-width: 1400px) {
   .headings {
     margin-top: 10%;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
+  .none {
+    display: none;
+  }
+  .logo {
+    width: 60px !important;
+  }
+
   .menu {
     display: block;
   }
@@ -373,11 +377,11 @@ span {
   }
 
   .toggle-links {
-    margin: 55% 30%;
+    margin: 100% 30%;
   }
 
   .socials {
-    transform: translateX(40vh);
+    transform: translateX(60vw);
     width: 40vw;
     z-index: 220;
     bottom: 10px;
@@ -404,16 +408,17 @@ span {
   }
 
   .headings {
+    margin-top: 120px;
     height: 50%;
     position: relative;
-    top: 50%;
+    font-size: 25px !important;
   }
 
   .heading-homepage {
     position: relative;
-    right: 10%;
+    margin: 0 !important;
     display: flex;
-    width: 60%;
+    width: 80vw;
   }
 
   .contact {
@@ -439,9 +444,18 @@ span {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .skills {
-    place-items: center;
-    margin: 0 auto;
+@media screen and (max-width: 391px) {
+  .headings {
+    font-size: 20px !important;
+  }
+
+  .heading-homepage {
+    position: relative;
+    right: 0;
+    width: 100%;
+  }
+
+  .typing-animation {
+    text-align: center;
   }
 }
