@@ -7,14 +7,12 @@ import { useEffect, useRef, useState } from "react";
 
 function App() {
   const [toggle, settoggle] = useState(false);
-  const [classname, setclassname] = useState(toggle ? "blur" : "page");
-  const ref = useRef(null);
 
   return (
     <div className="App">
       <Router>
         <Nav toggle={toggle} settoggle={settoggle} />
-        <div className={classname} ref={ref}>
+        <div className={toggle ? "blur" : "page"}>
           <Homepage />
         </div>
         <Routes>

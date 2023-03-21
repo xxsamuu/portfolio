@@ -40,7 +40,7 @@ span {
 }
 
 .blur {
-  transform: translateX(70px);
+  transform: translateX(100px);
   filter: blur(7px);
 }
 
@@ -86,7 +86,7 @@ span {
   display: none;
   right: 25%;
   transition: all 0.2s ease-in;
-  transform: translateY(-30%) !important;
+  transform: translateY(-10%) !important;
   z-index: 200;
 }
 
@@ -376,14 +376,13 @@ span {
   }
 
   .toggle-links {
-    margin: 100% 30%;
+    margin: 27vh 30%;
   }
 
   .socials {
-    transform: translateX(60vw);
-    width: 40vw;
+    transform: translateX(80vw);
+    width: 35vw;
     z-index: 220;
-    bottom: 10px;
   }
 
   .links img:hover {
