@@ -78,7 +78,6 @@ span {
 }
 
 .hamburger-menu {
-  top: 12%;
   right: 25px !important;
 }
 
@@ -87,14 +86,14 @@ span {
   display: none;
   right: 25%;
   transition: all 0.2s ease-in;
-  transform: translateY(-70%) !important;
+  transform: translateY(-30%) !important;
   z-index: 200;
 }
 
 .menu span {
   margin: 10px 0;
   display: block;
-  width: 50%;
+  width: 40%;
   position: relative;
   right: -50%;
   height: 6px;
@@ -104,14 +103,14 @@ span {
 .close-menu {
   background-color: #9aadea;
   transform: translateY(2px) !important;
-  height: 110vh;
+  height: 130vh;
   top: 0;
   right: 0%;
   width: 50vw;
 }
 
 .close-menu span {
-  top: 12%;
+  top: 90px;
   left: 5%;
   width: 15%;
   background-color: #341677;
@@ -134,12 +133,12 @@ span {
 }
 
 .bar-2 {
-  width: 40% !important;
+  width: 30% !important;
   background-color: #9aadea !important;
 }
 
 .hamburger-menu .bar-3 {
-  width: 25% !important;
+  width: 15% !important;
   background-color: #b3efff !important;
 }
 
